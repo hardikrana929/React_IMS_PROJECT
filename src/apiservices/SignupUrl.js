@@ -1,0 +1,1 @@
+export const Signup_Url = "http://localhost:9090/ims"

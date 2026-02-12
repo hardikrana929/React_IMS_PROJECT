@@ -1,0 +1,1 @@
+export const bash_url = "http://localhost:9090"
