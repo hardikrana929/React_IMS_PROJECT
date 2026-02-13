@@ -19,7 +19,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <h6 className="fw-bold text-uppercase mb-1 text-center">Inventory Management</h6>
+      <h6 className="fw-bold text-uppercase mb-1 text-center">Inventory Management <br/> System</h6>
 
       {/* MIDDLE: MENU */}
       <div className="sidebar-menu p-3 flex-grow-1" style={{ overflowY: "auto" }}>
