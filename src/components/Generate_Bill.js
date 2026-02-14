@@ -34,7 +34,7 @@ const GenerateBill = () => {
   const [searchTerm, setSearchTerm] = useState(""); // customer search
   const [sortOrder, setSortOrder] = useState("desc"); // id sorting
   const [currentPage, setCurrentPage] = useState(1); // pagination
-  const recordsPerPage = 5; // rows per page
+  const recordsPerPage = 10; // rows per page
 
 
   // --- Calculate Grand Total ---
