@@ -10,27 +10,21 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
-
   // Login code
   const handleLogin = () => {
-
     // validation
     if (!email || !pwd) {
       toast.error("Email and Password are required");
       return;
     }
-
     //fetch signup users
     axios.get(`${Signup_Url}/signup`)
       .then((response) => {
-
         const users = response.data;
-
         // match email and password
         const matchedUser = users.find(
           (u) => u.email === email && u.pwd === pwd
         );
-
         if (matchedUser) {
           toast.success("Login Successful");
           localStorage.setItem("KeepLogin", JSON.stringify(true))
@@ -44,12 +38,10 @@ const Login = () => {
               uid: matchedUser.uid
             })
           );
-
           navigate("/dashboard");
         } else {
           toast.error("Invalid Email or Password");
         }
-
       })
       .catch((error) => {
         toast.error("Server error, try again");
