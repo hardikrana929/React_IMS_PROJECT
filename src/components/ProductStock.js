@@ -7,25 +7,18 @@ import { useNavigate, useLocation } from "react-router-dom";
 const LowStock = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
   /* ===================== STATE MANAGEMENT ===================== */
-
   // Main product list from API
   const [products, setProducts] = useState([]);
-
   // Search
   const [searchTerm, setSearchTerm] = useState("");
-
   // Sorting
   const [sortField, setSortField] = useState("pid"); // pid | pqty
   const [sortOrder, setSortOrder] = useState("asc"); // asc | desc
-
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-
   /* ===================== API CALL ===================== */
-
   const getAllProducts = () => {
     axios
       .get(`${bash_url}/product`)

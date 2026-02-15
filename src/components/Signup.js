@@ -6,44 +6,31 @@ import axios from "axios";
 const Signup = () => {
 
   const navigate = useNavigate();
-
   // Signup form state
   const [signup, setSignup] = useState({
-    fname: "",
-    bname: "",
-    email: "",
-    pwd: "",
-    confirmPwd: ""
+    fname: "", bname: "", email: "", pwd: "", confirmPwd: ""
   });
-
   // Error state
   const [error, setError] = useState("");
-
   // Show / hide password
   const [showPwd, setShowPwd] = useState(false);
-
   // Input change handler
   const handleChange = (e) => {
     setSignup({ ...signup, [e.target.name]: e.target.value });
   };
-
   // Page title
   useEffect(() => {
     document.title = "Signup";
   }, []);
-
   // Submit handler
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // Password match validation
     if (signup.pwd !== signup.confirmPwd) {
       setError("Password and Confirm Password do not match");
       return;
     }
-
     setError("");
-
     // Post data to server
     postDataToServer({
       fname: signup.fname,
@@ -51,7 +38,6 @@ const Signup = () => {
       email: signup.email,
       pwd: signup.pwd
     });
-
     // Redirect to login
     navigate("/login");
   };

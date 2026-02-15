@@ -7,15 +7,13 @@ import { Signup_Url } from "../apiservices/SignupUrl";
 
 const ForgotPass = () => {
   const navigate = useNavigate();
-
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [email, setEmail] = useState("");
   const [newPwd, setNewPwd] = useState("");
   const [confirmPwd, setConfirmPwd] = useState("");
-
   const handleReset = () => {
-    // 1️⃣ Validation
+    //Validation
     if (!email || !newPwd || !confirmPwd) {
       toast.error("All fields are required");
       return;
@@ -24,13 +22,11 @@ const ForgotPass = () => {
       toast.error("Passwords do not match");
       return;
     }
-
-    // 2️⃣ Fetch users and update password
+    // Fetch users and update password
     axios.get(`${Signup_Url}/signup`)
       .then((response) => {
         const users = response.data;
         const userIndex = users.findIndex((u) => u.email === email);
-
         if (userIndex !== -1) {
           // Update password
           axios.put(`${Signup_Url}/signup`, {

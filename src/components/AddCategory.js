@@ -91,12 +91,10 @@ const Category = () => {
       }
     );
   };
-
   // Load data on page load
   useEffect(() => {
     fetchCategoryFromServer();
   }, []);
-
 
   //  HANDLE FORM INPUT CHANGE
 
@@ -127,8 +125,8 @@ const Category = () => {
     axios.delete(`${Signup_Url}/category/${cId}`).then(
       (response) => {
         fetchCategoryFromServer();
-        toast.success("Category delete successfully.");   
-                     
+        toast.success("Category delete successfully.");
+
       }, (error) => {
         toast.error("Opps! Server error");
       }
@@ -154,20 +152,16 @@ const Category = () => {
       axios.post(`${Signup_Url}/category`, category).then(
         () => {
           toast.success("Category Added Successfully");
-
           // Close modal
           setShowModal(false);
-
           // Reset form
           setCategory({ cid: "", cname: "", cdesc: "" });
-
           // Refresh table data
           fetchCategoryFromServer();
         },
         () => {
           toast.error("Failed to add category");
         }
-
       );
     };
   }
@@ -210,8 +204,8 @@ const Category = () => {
                   <th onClick={() => handleSort("cdesc")} style={{ cursor: "pointer" }}>
                     Description <i className="bi bi-arrow-down-up"></i>
                   </th>
-                  
-                   {/* <th>Name</th> */}
+
+                  {/* <th>Name</th> */}
                   {/* <th>Description</th> */}
                   <th>Edit</th>
                   <th>Delete</th>

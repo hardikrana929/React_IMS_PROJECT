@@ -6,7 +6,6 @@ import { Signup_Url } from "../apiservices/SignupUrl";
 
 const Login = () => {
   const navigate = useNavigate();
-
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");

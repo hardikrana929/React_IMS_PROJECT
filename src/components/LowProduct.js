@@ -1,13 +1,7 @@
-// Import React hooks
 import { useEffect, useState } from "react";
-
-// Import axios for API calls
 import axios from "axios";
-
-// Import base API URL
 import { bash_url } from "../apiservices/Url";
 
-// Number of rows per page
 const ITEMS_PER_PAGE = 5;
 
 // Low stock product component

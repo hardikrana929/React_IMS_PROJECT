@@ -101,12 +101,9 @@ const GenerateBill = () => {
 
   const validateCustomer = () => {
     const err = {};
-
     if (!customer.name) err.name = "Customer name is required";
-
     if (!customer.date) {
-      err.date = "Issue date is required";
-    }
+      err.date = "Issue date is required";    }
 
     if (!customer.dueDate) {
       err.dueDate = "Due date is required";
