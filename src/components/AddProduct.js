@@ -3,7 +3,6 @@ import { bash_url } from "../apiservices/Url";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import LowStock from "./ProductStock";
 import { Signup_Url } from "../apiservices/SignupUrl";
 
 const AddProduct = () => {
