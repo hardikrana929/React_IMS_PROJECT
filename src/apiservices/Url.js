@@ -1,1 +1,1 @@
-export const bash_url = "http://localhost:9090"
+export const bash_url = "https://imsapi-22w9.onrender.com"
