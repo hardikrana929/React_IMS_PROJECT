@@ -1,1 +1,1 @@
-export const bash_url = "https://imsapi-22w9.onrender.com"
+export const bash_url = import.meta.env.API_BASE_URL

@@ -1,1 +1,1 @@
-export const Signup_Url = "https://imsapi-22w9.onrender.com/ims"
+export const Signup_Url = import.meta.env.API_BASE_URL;
