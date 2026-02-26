@@ -15,6 +15,9 @@ import ForgotPass from "./components/ForgotPass";
 function App() {
   const isLogin = JSON.parse(localStorage.getItem("KeepLogin"));
 
+  useEffect{
+    document.title = "IMS"
+  }
   return (
     <>
       <ToastContainer />
